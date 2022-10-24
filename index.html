@@ -14,8 +14,8 @@
       <div class="card-title h1 px-3 py-3 fw-bold"> Todo List</div>
       <div class="card-body">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="First Name" aria-label="Username">
-          <input type="text" class="form-control" placeholder="Surname" aria-label="Server">
+          <input type="text" id="name" class="form-control" placeholder="First Name" aria-label="Username">
+          <input type="text" id="surname" class="form-control" placeholder="Surname" aria-label="Server">
           <button class="btn btn-success btn-custom-success" id="submit">Submit</button>
         </div>
         <p class="text-uppercase text-danger d-none fw-bold" id="correction">Ad'in uzunlugu minumum 3 herf olmalidir</p>
@@ -34,7 +34,7 @@
               <td>Mark</td>
               <td>Otto</td> 
               <td class="text-center">
-                <button onclick="this.parentElement.parentElement.parentElement.classList.toggle('active-ls')" class="btn btn-success done-btn col-md-5">Redacte</button>
+                <button onclick="redacte(this)" class="btn btn-success done-btn col-md-5">Redacte</button>
                 <button onclick="this.parentElement.parentElement.remove()" class="btn btn-danger col-md-5">Delete</button>
               </td>
             </tr>
@@ -43,7 +43,7 @@
               <td>Mehemmed</td>
               <td>Osmanov</td>
               <td class="text-center">
-                <button onclick="this.parentElement.parentElement.parentElement.classList.toggle('active-ls')" class="btn btn-success done-btn col-md-5">Redacte</button>
+                <button onclick="redacte(this)" class="btn btn-success done-btn col-md-5">Redacte</button>
                 <button onclick="this.parentElement.parentElement.remove()" class="btn btn-danger col-md-5">Delete</button>
               </td>
             </tr>

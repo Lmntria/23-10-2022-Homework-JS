@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.form-control:focus{
+  box-shadow: 2px 2px 2px #517ea8!important;
+  /* border-color: #517ea8; */
+}
+.btn-custom-success{
+  background-color:rgb(27, 125, 27) !important;
+}
+.btn-success:focus{
+  box-shadow: 2px 2px 2px rgb(3, 189, 3) !important;
+}

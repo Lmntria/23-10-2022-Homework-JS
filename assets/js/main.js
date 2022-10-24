@@ -1,15 +1,12 @@
 let submit=document.getElementById("submit")
+let info=document.getElementById("correction")
+let namearr=[];
+let surarr=[]
 let count=2
 submit.addEventListener('click',function() {
-  let surname=this.previousElementSibling;
+  let surname=this.previousElementSibling;  
   let name=surname.previousElementSibling
-  if ((surname.value.trim()==0 && name.value.trim()==0)) {
-    surname.style.borderColor="red"
-    name.style.borderColor="red"
-    alert("AD ve Soyad bos olabilmez!!!")
-  }
-  else{
-    let number=document.getElementsByClassName("list-number")
+  if ((surname.value.trim()>0 && name.value.trim()>0) || (name.value.length>2 && surname.value.length>5 )) {
     count++
     let tableBody=document.getElementById("table-body")
     tableBody.innerHTML+=
@@ -23,5 +20,17 @@ submit.addEventListener('click',function() {
       </td>
     </tr>
     `
+    surname.value=""
+    name.value=""
+    console.log(name)
+    info.style="display: none !important"
+    surname.style.borderColor="#ced4da"
+    name.style.borderColor="#ced4da"
+
+  }
+  else{
+    surname.style.borderColor="red"
+    name.style.borderColor="red"
+    info.style="display: block !important"
   }
 })
